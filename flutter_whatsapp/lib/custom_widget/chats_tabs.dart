@@ -32,8 +32,7 @@ class _ChatsTabState extends State<ChatsTab> {
     Chat(
       title: 'Sana',
       subtitle: 'Did you finish the task?',
-      imageUrl:
-          'https://funkylife.in/wp-content/uploads/2023/03/whatsapp-dp-574-2-1024x1024.jpg',
+      groupIcon: Icons.person,
       timeStamp: DateTime.now().subtract(const Duration(days: 2)),
     ),
     Chat(
@@ -44,7 +43,7 @@ class _ChatsTabState extends State<ChatsTab> {
       timeStamp: DateTime.now(),
     ),
     Chat(
-      title: 'Aliya',
+      title: 'Uni',
       subtitle: 'How are you?',
       isRead: true,
       imageUrl:
@@ -52,32 +51,32 @@ class _ChatsTabState extends State<ChatsTab> {
       timeStamp: DateTime.now().subtract(const Duration(days: 3)),
     ),
     Chat(
-      title: 'Sana',
+      title: '+923002336593',
       subtitle: 'Did you finish the task?',
-      groupIcon: Icons.group,
+      groupIcon: Icons.person,
       timeStamp: DateTime.now().subtract(const Duration(days: 4)),
     ),
     Chat(
-      title: 'Hira',
+      title: 'zainab',
       subtitle: 'Assignment done',
       imageUrl:
           'https://funylife.in/wp-content/uploads/2022/12/23_Whatsapp-Dp-images-FunyLife.in_-1024x1024.jpg',
       timeStamp: DateTime.now(),
     ),
     Chat(
-      title: 'Aliya',
+      title: 'mother',
+      subtitle: 'Hi MOM!',
+      imageUrl:
+          'https://funkylife.in/wp-content/uploads/2023/03/whatsapp-dp-574-2-1024x1024.jpg',
+      timeStamp: DateTime.now().subtract(const Duration(days: 6)),
+    ),
+    Chat(
+      title: 'coaching',
       subtitle: 'How are you?',
       isRead: true,
       imageUrl:
           'https://funkylife.in/wp-content/uploads/2023/03/whatsapp-dp-575-1-1024x1024.jpg',
       timeStamp: DateTime.now().subtract(const Duration(days: 5)),
-    ),
-    Chat(
-      title: 'Sana',
-      subtitle: 'Did you finish the task?',
-      imageUrl:
-          'https://funkylife.in/wp-content/uploads/2023/03/whatsapp-dp-574-2-1024x1024.jpg',
-      timeStamp: DateTime.now().subtract(const Duration(days: 6)),
     ),
   ];
 

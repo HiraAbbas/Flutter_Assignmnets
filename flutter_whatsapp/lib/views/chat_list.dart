@@ -4,23 +4,28 @@ import 'package:flutter_whatsapp/views/chats.dart';
 class ChatListTile extends StatelessWidget {
   final Chat chat;
 
-  const ChatListTile({Key? key, required this.chat, required int unreadMessagesCount}) : super(key: key);
+  const ChatListTile(
+      {Key? key, required this.chat, required int unreadMessagesCount})
+      : super(key: key);
 
   @override
-   Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return ListTile(
       tileColor: Colors.white,
-      leading: CircleAvatar(
-        backgroundImage: chat.imageUrl != null ? NetworkImage(chat.imageUrl!) : null,
-        radius: 30.0,
-        child: chat.groupIcon != null
-            ? Icon(
-                chat.groupIcon,
+      leading: chat.imageUrl != null
+          ? CircleAvatar(
+              backgroundImage: NetworkImage(chat.imageUrl!),
+              radius: 30.0,
+            )
+          : CircleAvatar(
+              backgroundColor: Colors.grey[300],
+              child: IconTheme(
+                data: IconThemeData(color: Colors.white),
+                child: Icon(Icons.person),
                 
-                size: 30.0,
-              )
-            : null,
-      ),
+              ),
+              radius: 30.0,
+            ),
       title: Text(chat.title),
       subtitle: Text(chat.subtitle),
       trailing: Column(
@@ -29,21 +34,21 @@ class ChatListTile extends StatelessWidget {
         children: <Widget>[
           Text(
             chat.formattedDate,
-            style: const TextStyle(),
+            style: TextStyle(),
           ),
-          const SizedBox(height: 4),
+          SizedBox(height: 4),
           if (!chat.isRead)
             Container(
-              padding: const EdgeInsets.all(4),
+              padding: EdgeInsets.all(4),
               decoration: BoxDecoration(
                 color: const Color(0xff128C7E),
                 borderRadius: BorderRadius.circular(12),
               ),
-              constraints: const BoxConstraints(
+              constraints: BoxConstraints(
                 minWidth: 20,
                 minHeight: 20,
               ),
-              child: const Text(
+              child: Text(
                 '1',
                 style: TextStyle(
                   color: Colors.white,
