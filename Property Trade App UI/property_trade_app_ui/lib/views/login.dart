@@ -10,10 +10,23 @@ class LoginPage extends StatelessWidget {
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  CircleAvatar(backgroundImage: NetworkImage("https://blogger.googleusercontent.com/img/a/AVvXsEhKnMpHHkukLTOmgb1piySSgo9He9REnqmDOie_fZPvJmDN_v-mJy8M63tOC2reusd4fBDruY4yy7mLnEozHJaZh-8csxdt59MGPSvd6pvoFlijYwsUD8gf4GB-lv3780RnKp3uZXq_o2K7IIFE7KDgUQHoDXlWr4AFfOq2KSsm3qst8fyKwZWPSfX5"),
-                   radius: 80, 
+                   Row(
+                  //crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                
+                IconButton(
+                  //padding: EdgeInsets.zero,
+                  icon: Icon(Icons.arrow_back),
+                  onPressed: () => Navigator.of(context).pop(),
+                ),
+              ],
+            ),
+                  CircleAvatar(
+                    backgroundImage: NetworkImage(
+                        "https://blogger.googleusercontent.com/img/a/AVvXsEhKnMpHHkukLTOmgb1piySSgo9He9REnqmDOie_fZPvJmDN_v-mJy8M63tOC2reusd4fBDruY4yy7mLnEozHJaZh-8csxdt59MGPSvd6pvoFlijYwsUD8gf4GB-lv3780RnKp3uZXq_o2K7IIFE7KDgUQHoDXlWr4AFfOq2KSsm3qst8fyKwZWPSfX5"),
+                    radius: 80,
                   ),
-                  
                   SizedBox(height: 20.0),
                   Text(
                     'Login to Your Account',
@@ -25,9 +38,8 @@ class LoginPage extends StatelessWidget {
                   ),
                   SizedBox(height: 40.0),
                   TextField(
-                    
                     decoration: InputDecoration(
-                       prefixIcon: Icon(Icons.email_rounded),
+                      prefixIcon: Icon(Icons.email_rounded),
                       labelText: 'Email',
                     ),
                   ),
@@ -48,7 +60,7 @@ class LoginPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Checkbox(
-                        value: false,
+                        value: true,
                         onChanged: (value) {},
                       ),
                       Text('Remember me'),
@@ -58,14 +70,18 @@ class LoginPage extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ProfileScreen()),
-                );
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ProfileScreen()),
+                      );
                     },
                     child: Text('Sign In'),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue[800],
+                      backgroundColor: Colors.blue,
                       padding: EdgeInsets.symmetric(vertical: 15.0),
+                       shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                ),
                     ),
                   ),
                   SizedBox(height: 20.0),
@@ -98,72 +114,79 @@ class LoginPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                     InkWell(
-  onTap: () {
-    // handle Google login button press
-  },
-  child: Container(
-    padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 20.0),
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(16.0),
-      color: Colors.white,
-    ),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(
-          Icons.ac_unit, // replace with the Google logo icon
-          color: Colors.red, // set icon color
-        ),
-        const SizedBox(width: 10.0),
-        const Text(
-          'Continue with Google',
-          style: TextStyle(color: Colors.black),
-        ),
-      ],
-    ),
-  ),
-),
-
-                      ElevatedButton.icon(
-                        onPressed: () {},
-                        icon: Icon(Icons.facebook),
-                        label: Text(
-                          'Facebook',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue[800],
-                          padding: EdgeInsets.symmetric(
+                      InkWell(
+                        onTap: () {
+                          // handle Google login button press
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
                               vertical: 15.0, horizontal: 20.0),
-                          shape: RoundedRectangleBorder(
+                          decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16.0),
+                            color: Colors.white,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons
+                                    .facebook, // replace with the Google logo icon
+                                color: Colors.blue, // set icon color
+                              ),
+                              const SizedBox(width: 8.0),
+                            ],
                           ),
                         ),
                       ),
-                      ElevatedButton.icon(
-                        onPressed: () {},
-                        icon: Icon(Icons.apple),
-                        label: Text(
-                          'Apple',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey[900],
-                          padding: EdgeInsets.symmetric(
+                      InkWell(
+                        onTap: () {
+                          // handle Google login button press
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
                               vertical: 15.0, horizontal: 20.0),
-                          shape: RoundedRectangleBorder(
+                          decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16.0),
+                            color: Colors.white,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons
+                                    .search, // replace with the Google logo icon
+                                color: Colors.black, // set icon color
+                              ),
+                              const SizedBox(width: 8.0),
+                            ],
                           ),
                         ),
                       ),
-                       const SizedBox(height: 20.0),
-            TextButton(
-              onPressed: () {
-                // Navigate to sign up page
-              },
-              child: const Text('Don\'t have an account? Sign Up'),
-            ),
+                      InkWell(
+                        onTap: () {
+                          // handle Google login button press
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 15.0, horizontal: 20.0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16.0),
+                            color: Colors.white,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons
+                                    .apple, // replace with the Google logo icon
+                                color: Colors.black, // set icon color
+                              ),
+                              const SizedBox(width: 8.0),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 20.0),
                     ],
                   ),
                 ])));

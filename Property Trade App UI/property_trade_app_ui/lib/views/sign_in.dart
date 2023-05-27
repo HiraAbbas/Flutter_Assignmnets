@@ -13,6 +13,18 @@ class LoginScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+              Row(
+                  //crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                
+                IconButton(
+                  //padding: EdgeInsets.zero,
+                  icon: Icon(Icons.arrow_back),
+                  onPressed: () => Navigator.of(context).pop(),
+                ),
+              ],
+            ),
             const SizedBox(height: 30.0),
             const CircleAvatar(
               backgroundImage: NetworkImage(
@@ -116,7 +128,7 @@ class LoginScreen extends StatelessWidget {
               },
               child: const Text('Sign In with Password'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue[800],
+                backgroundColor: Colors.blue,
                 padding: const EdgeInsets.symmetric(vertical: 15.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0),

@@ -10,7 +10,19 @@ class ProfileScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(height: 50.0),
+              Row(
+                  //crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                
+                IconButton(
+                  //padding: EdgeInsets.zero,
+                  icon: Icon(Icons.arrow_back),
+                  onPressed: () => Navigator.of(context).pop(),
+                ),
+              ],
+            ),
+           
             Text(
               'Fill Your Profile',
               style: TextStyle(
@@ -95,7 +107,7 @@ class ProfileScreen extends StatelessWidget {
                 backgroundColor: Colors.blue[800],
                 padding: EdgeInsets.symmetric(vertical: 15.0),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16.0),
+                  borderRadius: BorderRadius.circular(30.0),
                 ),
               ),
             ),
