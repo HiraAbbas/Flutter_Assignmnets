@@ -1,0 +1,113 @@
+{
+    "categories": [
+      {
+        "name": "Electronics",
+        "imageURL": "https://example.com/electronics.jpg",
+        "subcategories": [
+          "Mobile Phones",
+          "Laptops",
+          "Televisions",
+          "Cameras",
+          "Audio & Video",
+          "Accessories"
+        ]
+      },
+      {
+        "name": "Clothing",
+        "imageURL": "https://example.com/clothing.jpg",
+        "subcategories": [
+          "Men's Clothing",
+          "Women's Clothing",
+          "Kids' Clothing",
+          "Shoes",
+          "Accessories",
+          "Jewelry"
+        ]
+      },
+      {
+        "name": "Home & Kitchen",
+        "imageURL": "https://example.com/home-kitchen.jpg",
+        "subcategories": [
+          "Kitchen Appliances",
+          "Home Decor",
+          "Furniture",
+          "Bed & Bath",
+          "Storage & Organization",
+          "Tools & Home Improvement"
+        ]
+      },
+      {
+        "name": "Beauty & Personal Care",
+        "imageURL": "https://example.com/beauty-personal-care.jpg",
+        "subcategories": [
+          "Skincare",
+          "Haircare",
+          "Makeup",
+          "Fragrances",
+          "Personal Care Appliances",
+          "Men's Grooming"
+        ]
+      },
+      {
+        "name": "Sports & Outdoors",
+        "imageURL": "https://example.com/sports-outdoors.jpg",
+        "subcategories": [
+          "Exercise & Fitness",
+          "Outdoor Recreation",
+          "Team Sports",
+          "Camping & Hiking",
+          "Cycling",
+          "Water Sports"
+        ]
+      },
+      {
+        "name": "Books & Stationery",
+        "imageURL": "https://example.com/books-stationery.jpg",
+        "subcategories": [
+          "Books",
+          "Notebooks & Journals",
+          "Writing Instruments",
+          "Art & Craft Supplies",
+          "Office Supplies",
+          "Calendars & Planners"
+        ]
+      },
+      {
+        "name": "Health & Wellness",
+        "imageURL": "https://example.com/health-wellness.jpg",
+        "subcategories": [
+          "Vitamins & Supplements",
+          "Fitness Equipment",
+          "Health Monitors",
+          "Personal Care",
+          "First Aid",
+          "Alternative Medicine"
+        ]
+      },
+      {
+        "name": "Toys & Games",
+        "imageURL": "https://example.com/toys-games.jpg",
+        "subcategories": [
+          "Action Figures",
+          "Dolls & Accessories",
+          "Building Blocks",
+          "Board Games",
+          "Puzzles",
+          "Outdoor Play"
+        ]
+      },
+      {
+        "name": "Automotive",
+        "imageURL": "https://example.com/automotive.jpg",
+        "subcategories": [
+          "Car Parts & Accessories",
+          "Motorcycle Parts & Accessories",
+          "Tools & Equipment",
+          "Electronics",
+          "Interior Accessories",
+          "Exterior Accessories"
+        ]
+      }
+    ]
+  }
+  
